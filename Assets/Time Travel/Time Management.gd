@@ -47,16 +47,16 @@ func record_timeout():
 	current_time_index = len(time_indexes) - 1
 	
 	# Start up threads for recording each objects data
-#	var threads = []
+	var threads = []
 	for temporal_data in connected_nodes:
-#		var thread = Thread.new()
-#		thread.start(self, "record_temporal_data", temporal_data)
-#		threads.append(thread)
-		record_temporal_data(temporal_data)
-#
-#	# Wait until all threads finished
-#	for thread in threads:
-#		thread.wait_to_finish()
+		var thread = Thread.new()
+		thread.start(self, "record_temporal_data", temporal_data)
+		threads.append(thread)
+#		record_temporal_data(temporal_data)
+
+	# Wait until all threads finished
+	for thread in threads:
+		thread.wait_to_finish()
 
 func apply_temporal_data(temporal_data: Dictionary):
 	var temporal_node: TemporalNode = temporal_data.Node
@@ -78,7 +78,7 @@ func _physics_process(delta: float):
 			current_time_index = current_time_index - 1
 			current_time = time_indexes[current_time_index]
 			
-			# Start up threads for applying temporal data to each object
+#			# Start up threads for applying temporal data to each object
 #			var threads = []
 			for temporal_data in connected_nodes:
 #				var thread = Thread.new()

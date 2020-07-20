@@ -4,6 +4,16 @@ class_name RigidTemporal
 export var rigid_body_path := NodePath("..")
 onready var rigid_body := get_node(rigid_body_path) as RigidBody
 
+#func start_time_travel():
+#	rigid_body.custom_integrator = true
+#	rigid_body.sleeping = true
+#	rigid_body.mode = RigidBody.MODE_KINEMATIC
+#
+#func stop_time_travel():
+#	rigid_body.custom_integrator = false
+#	rigid_body.sleeping = false
+#	rigid_body.mode = RigidBody.MODE_RIGID
+
 func record_data() -> Dictionary:
 	var data = {
 		"transform": rigid_body.global_transform,

@@ -40,8 +40,6 @@ extents = Vector3( 0.25, 1, 2.5 )
 transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Time Manager" parent="." instance=ExtResource( 4 )]
-current_time = 0
-time_paused = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )

@@ -1,5 +1,4 @@
 extends KinematicBody
-
 class_name Player
 
 export var head_path := NodePath("Head")

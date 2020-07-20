@@ -39,10 +39,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Assets/Objects/Player/Camera.gd"
 }, {
+"base": "TemporalNode",
+"class": "RigidTemporal",
+"language": "GDScript",
+"path": "res://Assets/Time Travel/Data Recording Nodes/RigidTemporal.gd"
+}, {
 "base": "Node",
 "class": "TemporalNode",
 "language": "GDScript",
-"path": "res://Assets/Time Travel/TemporalNode.gd"
+"path": "res://Assets/Time Travel/Data Recording Nodes/TemporalNode.gd"
 }, {
 "base": "Node",
 "class": "TimeManager",
@@ -56,6 +61,7 @@ _global_script_class_icons={
 "Interactable": "",
 "Player": "",
 "PlayerCam": "",
+"RigidTemporal": "",
 "TemporalNode": "",
 "TimeManager": ""
 }
@@ -110,9 +116,9 @@ interact={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
-toggle_cyberdeck={
+reverse_time={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":44,"unicode":0,"echo":false,"script":null)
  ]
 }
 

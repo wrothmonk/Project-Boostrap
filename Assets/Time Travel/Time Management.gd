@@ -63,7 +63,7 @@ func apply_temporal_data(temporal_data: Dictionary):
 	var data: Dictionary = temporal_data.coordinates[current_time]
 	temporal_node.apply_data(data)
 
-func _process(delta: float):
+func _physics_process(delta: float):
 	if not time_paused:
 		var centi_delta := int(round(delta * 100))
 		current_time = current_time + centi_delta

@@ -2,7 +2,7 @@ extends Node
 class_name TimeManager
 
 export var current_time: int = 0 # Time in centiseconds, in form of int for accuracy and consistency of indexing
-export var save_frequency: int = 0
+export var save_frequency: int = 2
 export var time_paused := false
 
 var time_reversing := false
@@ -31,7 +31,7 @@ func connect_temporal_node(temporal_node: TemporalNode):
 	# TODO Optimization: turn this dictionary into a custom C++ module/datatype?
 	var temporal_data = {
 		"Node": temporal_node,
-		# TODO Optimization: convert to custom module/datatype
+		# TODO Optimization: convert to custom module/datatype as above
 		"coordinates": {} # Indexed by time stamps, values are data determined by each temporal node's script
 	}
 	connected_nodes.append(temporal_data)
@@ -52,7 +52,8 @@ func record_timeout():
 		var thread = Thread.new()
 		thread.start(self, "record_temporal_data", temporal_data)
 		threads.append(thread)
-	
+#		record_temporal_data(temporal_data)
+
 	# Wait until all threads finished
 	for thread in threads:
 		thread.wait_to_finish()
@@ -61,8 +62,6 @@ func apply_temporal_data(temporal_data: Dictionary):
 	var temporal_node: TemporalNode = temporal_data.Node
 	var data: Dictionary = temporal_data.coordinates[current_time]
 	temporal_node.apply_data(data)
-
-
 
 func _process(delta: float):
 	if not time_paused:
@@ -76,21 +75,21 @@ func _process(delta: float):
 	if time_reversing and Input.is_action_pressed("reverse_time") and current_time_index > 0:
 		reverse_timer -= int(round(delta * 100))
 		if reverse_timer <= 0:
-			print(reverse_timer)
 			current_time_index = current_time_index - 1
 			current_time = time_indexes[current_time_index]
 			
 			# Start up threads for applying temporal data to each object
-			var threads = []
+#			var threads = []
 			for temporal_data in connected_nodes:
-				var thread = Thread.new()
-				thread.start(self, "apply_temporal_data", temporal_data)
-				threads.append(thread)
-				
-			# Wait until all threads are finished
-			for thread in threads:
-				thread.wait_to_finish()
-			
+#				var thread = Thread.new()
+#				thread.start(self, "apply_temporal_data", temporal_data)
+#				threads.append(thread)
+				apply_temporal_data(temporal_data)
+#
+#			# Wait until all threads are finished
+#			for thread in threads:
+#				thread.wait_to_finish()
+
 			if current_time_index > 0:
 				reverse_timer = current_time - time_indexes[current_time_index - 1]
 		

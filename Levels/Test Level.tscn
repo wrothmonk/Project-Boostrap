@@ -61,8 +61,55 @@ shape = SubResource( 3 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
-[node name="Test Cube Red" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -1 )
+[node name="Red Test Cubes" type="Node" parent="."]
+
+[node name="Test Cube Red" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -3, 2, -1 )
+
+[node name="Test Cube Red2" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -4.21826, 2, -1 )
+
+[node name="Test Cube Red3" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -5.45754, 2, -1 )
+
+[node name="Test Cube Red4" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -6.72929, 2, -1 )
+
+[node name="Test Cube Red5" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -3, 3.17008, -1 )
+
+[node name="Test Cube Red6" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -4.21826, 3.17008, -1 )
+
+[node name="Test Cube Red7" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -5.45754, 3.17008, -1 )
+
+[node name="Test Cube Red8" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -6.72929, 3.17008, -1 )
+
+[node name="Test Cube Red9" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -3, 4.3542, -1 )
+
+[node name="Test Cube Red10" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -4.21826, 4.3542, -1 )
+
+[node name="Test Cube Red11" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -5.45754, 4.3542, -1 )
+
+[node name="Test Cube Red12" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -6.72929, 4.3542, -1 )
+
+[node name="Test Cube Red13" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -3, 5.60278, -1 )
+
+[node name="Test Cube Red14" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -4.21826, 5.60278, -1 )
+
+[node name="Test Cube Red15" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -5.45754, 5.60278, -1 )
+
+[node name="Test Cube Red16" parent="Red Test Cubes" instance=ExtResource( 2 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -6.72929, 5.60278, -1 )
 
 [node name="Test Cube Green" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, -1 )

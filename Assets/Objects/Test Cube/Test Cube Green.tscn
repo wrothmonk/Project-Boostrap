@@ -1,8 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Objects/Class Scripts/Interaction/Grabbable.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Time Travel/Data Recording Nodes/TemporalNode.gd" type="Script" id=2]
-
+[ext_resource path="res://Assets/Time Travel/Data Recording Nodes/RigidTemporal.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.5, 0.5, 0.5 )
@@ -19,7 +18,7 @@ extents = Vector3( 0.5, 0.5, 0.5 )
 
 [node name="Test Cube Green" type="RigidBody"]
 
-[node name="TemporalNode" type="Node" parent="."]
+[node name="RigidTemporal" type="Node" parent="."]
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

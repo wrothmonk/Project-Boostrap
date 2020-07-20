@@ -4,3 +4,13 @@
 
 [node name="Time Manager" type="Node"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Manages collection of all temporal node data along with controlling any time travel using said data.
+
+Current Time: Starting point (in centiseconds) of the Time Managers clock
+
+Save Frequency: How long between collection of temporal data (in centiseconds)
+
+Time Paused: if the internal clock is paused or not. (Should be true during any time travel)
+"
+}

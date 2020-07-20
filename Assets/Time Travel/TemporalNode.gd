@@ -19,3 +19,5 @@ func _ready():
 	TimeTravelEvents.connect("connect_manager", self, "connect_manager")
 # warning-ignore:return_value_discarded
 	TimeTravelEvents.connect("disconnect_manager", self, "disconnect_manager")
+	
+	print("Connected ", self.get_parent().name, " to TimeTravelEvents")

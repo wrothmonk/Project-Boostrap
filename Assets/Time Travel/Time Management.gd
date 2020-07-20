@@ -3,8 +3,8 @@ class_name TimeManager
 
 var connected_nodes = []
 export var current_time: int = 0 # Time in centiseconds, in form of int for accuracy and consistency of indexing
+export var save_frequency: int = 50
 export var time_paused := false
-export var save_frequency: int = 20
 var previous_save: int = 0
 
 func send_connect_signal():
@@ -54,4 +54,5 @@ func _process(delta: float):
 		var centi_delta := int(round(delta * 100))
 		current_time = current_time + centi_delta
 		if current_time - previous_save >= save_frequency:
+			previous_save = current_time
 			record_timeout()

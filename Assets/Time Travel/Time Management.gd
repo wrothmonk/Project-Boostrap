@@ -52,6 +52,7 @@ func record_timeout():
 		var thread = Thread.new()
 		thread.start(self, "record_temporal_data", temporal_data)
 		threads.append(thread)
+#		record_temporal_data(temporal_data)
 
 	# Wait until all threads finished
 	for thread in threads:
@@ -78,16 +79,16 @@ func _physics_process(delta: float):
 			current_time = time_indexes[current_time_index]
 			
 			# Start up threads for applying temporal data to each object
-#			var threads = []
+			var threads = []
 			for temporal_data in connected_nodes:
-#				var thread = Thread.new()
-#				thread.start(self, "apply_temporal_data", temporal_data)
-#				threads.append(thread)
-				apply_temporal_data(temporal_data)
-#
-#			# Wait until all threads are finished
-#			for thread in threads:
-#				thread.wait_to_finish()
+				var thread = Thread.new()
+				thread.start(self, "apply_temporal_data", temporal_data)
+				threads.append(thread)
+#				apply_temporal_data(temporal_data)
+
+			# Wait until all threads are finished
+			for thread in threads:
+				thread.wait_to_finish()
 
 			if current_time_index > 0:
 				reverse_timer = current_time - time_indexes[current_time_index - 1]

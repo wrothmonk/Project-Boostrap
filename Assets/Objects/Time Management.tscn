@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Time Recorder" type="Node"]
+
+[node name="Record Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.5
+autostart = true
+__meta__ = {
+"_editor_description_": "Timer that sends out the signal for all objects that need to record their states for rewinding to do so."
+}

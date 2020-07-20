@@ -1,0 +1,110 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://git_api.gdns"
+}, {
+"base": "Interactable",
+"class": "Grabbable",
+"language": "GDScript",
+"path": "res://Assets/Objects/Class Scripts/Interaction/Grabbable.gd"
+}, {
+"base": "Grabbable",
+"class": "InteractGrab",
+"language": "GDScript",
+"path": "res://Assets/Objects/Class Scripts/Interaction/InteractableGrabbable.gd"
+}, {
+"base": "Area",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://Assets/Objects/Class Scripts/Interaction/Interactable.gd"
+}, {
+"base": "KinematicBody",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Assets/Player/Player.gd"
+}, {
+"base": "Spatial",
+"class": "PlayerCam",
+"language": "GDScript",
+"path": "res://Assets/Player/Camera.gd"
+} ]
+_global_script_class_icons={
+"GitAPI": "",
+"Grabbable": "",
+"InteractGrab": "",
+"Interactable": "",
+"Player": "",
+"PlayerCam": ""
+}
+
+[application]
+
+config/name="Project Bootstrap"
+run/main_scene="res://Levels/Test Level.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+TimeTravelEvents="*res://Assets/Autoload/TimeTravelEvents.gd"
+
+[display]
+
+window/size/resizable=false
+
+[gdnative]
+
+singletons=[ "res://git_api.gdnlib" ]
+
+[input]
+
+Jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_forward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_backward={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+toggle_cyberdeck={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/directional_shadow/size=16384
+environment/default_environment="res://default_env.tres"

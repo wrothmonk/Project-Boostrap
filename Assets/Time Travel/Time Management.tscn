@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Time Travel/Time Management.gd" type="Script" id=1]
+
+[node name="Time Manager" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Record Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.5
+autostart = true
+__meta__ = {
+"_editor_description_": "Timer that prompts the Time Manager to save the current state of the game world"
+}
+[connection signal="timeout" from="Record Timer" to="." method="record_timeout"]

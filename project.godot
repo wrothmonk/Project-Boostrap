@@ -32,12 +32,22 @@ _global_script_classes=[ {
 "base": "KinematicBody",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Assets/Player/Player.gd"
+"path": "res://Assets/Objects/Player/Player.gd"
 }, {
 "base": "Spatial",
 "class": "PlayerCam",
 "language": "GDScript",
-"path": "res://Assets/Player/Camera.gd"
+"path": "res://Assets/Objects/Player/Camera.gd"
+}, {
+"base": "Node",
+"class": "TemporalNode",
+"language": "GDScript",
+"path": "res://Assets/Time Travel/TemporalNode.gd"
+}, {
+"base": "Node",
+"class": "TimeManager",
+"language": "GDScript",
+"path": "res://Assets/Time Travel/Time Management.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
@@ -45,7 +55,9 @@ _global_script_class_icons={
 "InteractGrab": "",
 "Interactable": "",
 "Player": "",
-"PlayerCam": ""
+"PlayerCam": "",
+"TemporalNode": "",
+"TimeManager": ""
 }
 
 [application]
